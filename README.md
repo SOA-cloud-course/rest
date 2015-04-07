@@ -2,15 +2,15 @@
 
 ### Specification of a protocol
 
-| Path and method | Parameters | Return value (HTTP code, value) |
-| --------------- | ---------- | ------------------------------- |
-| `/:id` - GET    | `:id`      | 301, value; 404, -              |
-| `/:id` - PUT    | `:id`      | 200, -; 400, "error"; 404, -    |
-| `/:id` - DELETE | `:id`      | 204, -; 404, -                  |
-| --------------- | ---------- | ------------------------------- |
-| `/` - GET       | -          | 200, :keys                      |
-| `/` - POST      | `:url`     | 201, :id; 400, "error"          |
-| `/` - DELETE    | -          | 204, -                          |
+| Path and method | Parameters   | Return value (HTTP code, value) |
+| --------------- | ------------ | ------------------------------- |
+| `/:id` - GET    | `:id`        | 301, value; 404, -              |
+| `/:id` - PUT    | `:id`, `:url`| 200, -; 400, "error"; 404, -    |
+| `/:id` - DELETE | `:id`        | 204, -; 404, -                  |
+| --------------- | ------------ | ------------------------------- |
+| `/` - GET       | -            | 200, :keys                      |
+| `/` - POST      | `:url`       | 201, :id; 400, "error"          |
+| `/` - DELETE    | -            | 204, -                          |
 
 ### Testing
 
